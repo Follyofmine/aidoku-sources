@@ -16,12 +16,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Prepare index.json
+      - name: Prepare index.min.json
         run: |
           mkdir public
-          cp index.json public/
+          cp index.min.json public/
 
-      - name: Deploy index.json to GitHub Pages
+      - name: Deploy index.min.json to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
